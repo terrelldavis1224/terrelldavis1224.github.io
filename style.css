@@ -1,0 +1,354 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden; 
+    background-color: black;
+    color: white;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100vh;
+    width: 100vw;
+    position: relative; /* Already positioned relatively */
+    overflow: visible; /* Allows children to overflow */
+    z-index: 1; /* Ensures grid content is above non-positioned content */
+}
+
+#floatingArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Below the content but within the wrapper */
+    pointer-events: none; /* Allows clicks to pass through to elements below */
+    will-change: transform;
+
+}
+
+
+.name {
+    font-size: 1.2em;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr); 
+    grid-gap: 0; 
+    height: 100vh; 
+    width: 100vw; 
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 6; 
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.middle-left {
+    grid-area: 2 / 1 / 5 / 3; 
+    padding: 10px;
+}
+
+.middle-right {
+    grid-area: 2 / 3 / 5 / 6; /* From the second to the fourth row, spanning last three columns */
+    padding: 10px;
+}
+
+.footer {
+    grid-area: 5 / 1 / 6 / 6; /* Spans all five columns in the fifth row */
+    display: flex;
+}
+
+.footer-left {
+    flex: 1;
+    padding: 10px;
+    font-size: larger;
+}
+
+.footer-right {
+    flex: 1;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+#T1 {
+    animation: KeyT1 7s infinite;
+}
+#E1 {
+   animation: KeyE1 7s infinite;
+}
+#R1 {
+animation: KeyR1 7s infinite;}
+#R2 {
+    animation: KeyR2 7s infinite;
+}
+#E2 {
+    animation: KeyE2 7s infinite;
+}
+#L1 {
+    animation: KeyL1 7s infinite;
+}
+#L2 {
+    animation: KeyL2 7s infinite;
+}
+#D1 {
+    animation: KeyD1 7s infinite;
+}
+#A1 {
+    animation: KeyA1 7s infinite;
+}
+#V1 {
+    animation: KeyV1 7s infinite;}
+#I1 {
+    animation: KeyI1 7s infinite;}
+#S1 {
+    animation: KeyS1 7s infinite;
+}
+
+
+@keyframes KeyT1 {
+    0%, 100% { 
+        transform: rotate(330deg) translate(-33px, 0px);
+    }
+    50% { 
+        transform: rotate(360deg) translate(0px, 0px);
+    }
+}
+
+
+@keyframes KeyE1 {
+    0%, 100% { transform: rotate(10deg) translate(-10px, -10px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+
+@keyframes KeyR1 {
+    0%, 100% { transform: rotate(30deg) translate(-5px, 15px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+@keyframes KeyR2 {
+    0%, 100% { transform: rotate(345deg) translate(5px, -10px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyE2 {
+    0%, 100% { transform: rotate(355deg) translate(0px, -5px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyL1 {
+    0%, 100% { transform: rotate(5deg) translate(-15px, 5px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+@keyframes KeyL2 {
+    0%, 100% { transform: rotate(15deg) translate(-20px, 10px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+@keyframes KeyD1 {
+    0%, 100% { transform: rotate(340deg) translate(-25px, -15px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyA1 {
+    0%, 100% { transform: rotate(20deg) translate(-10px, 20px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+@keyframes KeyV1 {
+    0%, 100% { transform: rotate(330deg) translate(-30px, -20px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyI1 {
+    0%, 100% { transform: rotate(350deg) translate(-5px, -5px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyS1 {
+    0%, 100% { transform: rotate(25deg) translate(-10px, 10px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+
+.links{
+    padding: 1em;
+    border: 1px solid  whitesmoke;
+    text-decoration: none;
+    color: white;
+    border-radius: 13px;
+    min-width: 50px;  
+    min-height: 20px; 
+    display: inline-block; 
+}
+
+.links:hover{
+    background-color: white;
+    color: black;
+    scale: 1.2;
+
+
+}
+
+
+h1 {
+    font-size: 2.5em;
+    color:white;
+    font-weight: bold;
+}
+
+
+
+.gradient-text {
+    background: linear-gradient(45deg, rgb(2, 2, 155), red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: background-shift 10s infinite linear;
+    text-align: center;
+}
+
+@keyframes background-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+
+.square {
+    
+    color: rgb(0, 191, 255); /* Brighter blue color */
+    text-shadow:
+        0 0 2px rgba(0, 191, 255, 1),    /* Sharp inner glow */
+        0 0 5px rgba(0, 191, 255, 1),    /* Strong immediate halo */
+        0 0 10px rgba(0, 191, 255, 1),   /* First layer of diffusion */
+        0 0 20px rgba(0, 191, 255, 0.8), /* Second layer of diffusion */
+        0 0 40px rgba(0, 191, 255, 0.6), /* Third layer of diffusion */
+        0 0 80px rgba(0, 191, 255, 0.4), /* Fourth layer of diffusion */
+        0 0 120px rgba(0, 191, 255, 0.2); /* Outermost broad glow */
+        z-index: -1;
+        font-size: larger;
+
+}
+
+.octagon{
+    color: rgb(255, 255, 255); /* White text */
+    text-shadow:
+        0 0 2px rgba(255, 255, 255, 1),    /* Sharp inner glow */
+        0 0 5px rgba(255, 255, 255, 1),    /* Strong immediate halo */
+        0 0 10px rgba(255, 255, 255, 1),   /* First layer of diffusion */
+        0 0 20px rgba(255, 255, 255, 0.8), /* Second layer of diffusion */
+        0 0 40px rgba(255, 255, 255, 0.6), /* Third layer of diffusion */
+        0 0 80px rgba(255, 255, 255, 0.4), /* Fourth layer of diffusion */
+        0 0 120px rgba(255, 255, 255, 0.2); /* Outermost broad glow */
+
+    position: absolute;
+    animation: rise 10s linear infinite;
+
+    font-size: larger;
+}
+
+@keyframes rise {
+    from {
+        opacity: 1;
+        bottom: -100%; 
+    }
+    to {
+        opacity: 0;
+        bottom: 100%; /* Move to above the screen */
+    }
+}
+
+
+.triangle {
+    color: rgb(64, 226, 160); /* Green color */
+    text-shadow:
+        0 0 2px rgba(64, 226, 160, 1),    /* Sharp inner glow */
+        0 0 5px rgba(64, 226, 160, 1),    /* Strong immediate halo */
+        0 0 10px rgba(64, 226, 160, 1),   /* First layer of diffusion */
+        0 0 20px rgba(64, 226, 160, 0.8), /* Second layer of diffusion */
+        0 0 40px rgba(64, 226, 160, 0.6), /* Third layer of diffusion */
+        0 0 80px rgba(64, 226, 160, 0.4), /* Fourth layer of diffusion */
+        0 0 120px rgba(64, 226, 160, 0.2); /* Outermost broad glow */
+
+}
+
+
+
+
+.circle {
+    color: rgb(255, 70, 70); /* Vibrant red text */
+    text-shadow:
+        0 0 2px rgba(255, 0, 0, 1),    /* Sharp inner glow */
+        0 0 5px rgba(255, 0, 0, 1),    /* Strong immediate halo */
+        0 0 10px rgba(255, 0, 0, 1),   /* First layer of diffusion */
+        0 0 20px rgba(255, 0, 0, 0.8), /* Second layer of diffusion */
+        0 0 40px rgba(255, 0, 0, 0.6), /* Third layer of diffusion */
+        0 0 80px rgba(255, 0, 0, 0.4), /* Fourth layer of diffusion */
+        0 0 120px rgba(255, 0, 0, 0.2); 
+
+}
+
+
+@media (max-width: 768px) {
+    .header, .middle-left, .middle-right, .footer {
+        grid-template-columns: 1fr; /* Adjust grid layout for mobile screens */
+        padding: 10px; /* Smaller padding */
+    }
+    h1, .links, .name {
+        font-size: smaller; /* Smaller font sizes for mobile */
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important; 
+        transition-duration: 0.001ms !important;
+    }
+}
+
+
+.heart {
+    color: rgb(255, 20, 147); /* Pink color */
+    text-shadow: 
+        0 0 5px rgba(255, 20, 147, 1),
+        0 0 10px rgba(255, 20, 147, 1),
+        0 0 20px rgba(255, 20, 147, 1),
+        0 0 40px rgba(255, 20, 147, 0.7),
+        0 0 80px rgba(255, 20, 147, 0.5),
+        0 0 100px rgba(255, 20, 147, 0.3); /* Layered pink glow */
+    position: absolute;
+    font-size: larger;
+
+    animation: rise 10s linear infinite;
+}
+
+.star {
+    color: rgb(255, 215, 0); /* Gold color */
+    text-shadow: 
+        0 0 5px rgba(255, 215, 0, 1),
+        0 0 10px rgba(255, 215, 0, 1),
+        0 0 20px rgba(255, 215, 0, 1),
+        0 0 40px rgba(255, 215, 0, 0.7),
+        0 0 80px rgba(255, 215, 0, 0.5),
+        0 0 100px rgba(255, 215, 0, 0.3); /* Layered gold glow */
+    position: absolute;
+    font-size: larger;
+
+    animation: rise 10s linear infinite;
+}
