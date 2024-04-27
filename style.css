@@ -5,9 +5,11 @@ body, html {
     overflow: auto; 
     background-color: black;
     color: white;
-    font-size: .8em;
+    font-size: 2vh;
 }
-
+.name_container{
+    padding: 1em;
+}
 .wrapper {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -32,8 +34,8 @@ body, html {
 }
 
 
-.name {
-    font-size: 1em;
+.jobtitle {
+    padding: 1em;
 }
 .wrapper {
     display: grid;
@@ -85,15 +87,15 @@ body, html {
 
 
 #T1 {
-    animation: KeyT1 7s infinite;
+    animation: KeyT1 7s infinite !important;
 }
 #E1 {
-   animation: KeyE1 7s infinite;
+   animation: KeyE1 7s infinite !important;
 }
 #R1 {
-animation: KeyR1 7s infinite;}
+animation: KeyR1 7s infinitem!important;}
 #R2 {
-    animation: KeyR2 7s infinite;
+    animation: KeyR2 7s infinite !important;
 }
 #E2 {
     animation: KeyE2 7s infinite;
@@ -184,7 +186,11 @@ animation: KeyR1 7s infinite;}
     0%, 100% { transform: rotate(25deg) translate(-10px, 10px); }
     50% { transform: rotate(0deg) translate(0px, 0px); }
 }
-
+.name_container .name {
+    /* Ensure animations are still applied when inside .name_container */
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
 
 .links{
     padding: 1em;
@@ -192,8 +198,8 @@ animation: KeyR1 7s infinite;}
     text-decoration: none;
     color: white;
     border-radius: 13px;
-   
     display: inline-block; 
+    margin:     0.5em;
 }
 
 .links:hover{
