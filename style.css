@@ -5,6 +5,7 @@ body, html {
     overflow: hidden; 
     background-color: black;
     color: white;
+    font-size: .8em;
 }
 
 .wrapper {
@@ -19,7 +20,7 @@ body, html {
 }
 
 #floatingArea {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,7 +33,7 @@ body, html {
 
 
 .name {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .wrapper {
     display: grid;
@@ -191,8 +192,7 @@ animation: KeyR1 7s infinite;}
     text-decoration: none;
     color: white;
     border-radius: 13px;
-    min-width: 50px;  
-    min-height: 20px; 
+   
     display: inline-block; 
 }
 
@@ -206,7 +206,6 @@ animation: KeyR1 7s infinite;}
 
 
 h1 {
-    font-size: 2.5em;
     color:white;
     font-weight: bold;
 }
