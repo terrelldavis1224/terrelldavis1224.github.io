@@ -82,7 +82,9 @@ body, html {
 
 
 
-
+button.links {
+    background-color: black;
+}
 
 
 
@@ -193,7 +195,7 @@ animation: KeyR1 7s infinitem!important;}
 }
 
 .links{
-    padding: 1em;
+    padding: 1.2em;
     border: 1px solid  whitesmoke;
     text-decoration: none;
     color: white;
