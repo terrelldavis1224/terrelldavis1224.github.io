@@ -187,7 +187,7 @@ animation: KeyR1 7s infinitem!important;}
     50% { transform: rotate(0deg) translate(0px, 0px); }
 }
 .name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     text-align: center;
 }
