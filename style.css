@@ -354,3 +354,18 @@ h1 {
 
     animation: rise 10s linear infinite;
 }
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .header, .middle-left, .middle-right, .footer {
+        grid-template-columns: 1fr; /* Adjust grid layout for mobile screens */
+        padding: 10px; /* Smaller padding */
+    }
+    h1, .links, .name {
+        font-size: smaller; /* Smaller font sizes for mobile */
+    }
+}
