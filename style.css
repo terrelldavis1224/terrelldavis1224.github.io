@@ -7,9 +7,7 @@ body, html {
     color: white;
     font-size: 2vh;
 }
-.name_container{
-    padding: 1em;
-}
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -33,6 +31,21 @@ body, html {
 
 }
 
+.pimg {
+    width: 30vmin;
+    height: 40vmin; 
+    border-radius: 5px;
+    margin: 1em;
+    
+}
+
+.img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
 
 .jobtitle {
     padding: 1em;
@@ -45,40 +58,33 @@ body, html {
     height: 100vh; 
     width: 100vw; 
 }
-
 .header {
     grid-area: 1 / 1 / 2 / 6; 
     padding: 20px;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+   /* border: 2px solid wheat; */
 }
 
 .middle-left {
-    grid-area: 2 / 1 / 5 / 3; 
+    grid-area: 2 / 1 / 5 / 6; 
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.middle-right {
-    grid-area: 2 / 3 / 5 / 6; /* From the second to the fourth row, spanning last three columns */
-    padding: 10px;
-}
 
 .footer {
     grid-area: 5 / 1 / 6 / 6; /* Spans all five columns in the fifth row */
     display: flex;
+   /* border: 2px solid wheat; */
+
 }
 
-.footer-left {
-    flex: 1;
-    padding: 10px;
-    font-size: larger;
-}
 
-.footer-right {
-    flex: 1;
-    padding: 10px;
-}
 
 
 
@@ -188,10 +194,10 @@ animation: KeyR1 7s infinitem!important;}
     0%, 100% { transform: rotate(25deg) translate(-10px, 10px); }
     50% { transform: rotate(0deg) translate(0px, 0px); }
 }
-.name_container .name {
-    /* Ensure animations are still applied when inside .name_container */
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
+.name {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
 }
 
 .links{
@@ -201,7 +207,7 @@ animation: KeyR1 7s infinitem!important;}
     color: white;
     border-radius: 13px;
     display: inline-block; 
-    margin:     0.5em;
+    margin:     2em;
 }
 
 .links:hover{
@@ -227,6 +233,11 @@ h1 {
     color: transparent;
     animation: background-shift 10s infinite linear;
     text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+
+    line-height: 1.5;
+
 }
 
 @keyframes background-shift {
