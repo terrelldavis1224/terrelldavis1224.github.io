@@ -50,17 +50,9 @@ body, html {
 .jobtitle {
     padding: 1em;
 }
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr); 
-    grid-gap: 0; 
-    height: 100vh; 
-    width: 100vw; 
-}
+
 .header {
     grid-area: 1 / 1 / 2 / 6; 
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,7 +187,7 @@ animation: KeyR1 7s infinitem!important;}
     50% { transform: rotate(0deg) translate(0px, 0px); }
 }
 .name {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     text-align: center;
 }
@@ -322,15 +314,7 @@ h1 {
 }
 
 
-@media (max-width: 768px) {
-    .header, .middle-left, .middle-right, .footer {
-        grid-template-columns: 1fr; /* Adjust grid layout for mobile screens */
-        padding: 10px; /* Smaller padding */
-    }
-    h1, .links, .name {
-        font-size: smaller; /* Smaller font sizes for mobile */
-    }
-}
+
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
