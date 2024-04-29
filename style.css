@@ -1,0 +1,434 @@
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: auto; 
+    background-color: black;
+    color: white;
+    font-size: 1.8vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100vh;
+    width: 100vw;
+    position: relative; 
+    overflow: visible;
+    z-index: 1; 
+}
+
+
+.middle-left {
+    grid-area: 2 / 1 / 5 / 6; 
+    padding: 10px;
+    display: flex;  
+    flex-direction: column; 
+    height: calc(100vh - 100px); 
+}
+
+
+
+
+
+#floatingArea {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    pointer-events: none; 
+    will-change: transform;
+
+}
+
+
+.jobtitle {
+    padding: 1em;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+
+.middle-left {
+    grid-area: 2 / 1 / 5 / 6; 
+    padding: 10px;
+   
+
+}
+
+
+.footer {
+    grid-area: 5 / 1 / 6 / 6; 
+    display: flex;
+    flex-direction: column;
+   /* border: 2px solid wheat; */
+
+}
+
+
+#T1 {
+    animation: KeyT1 7s infinite ;
+
+
+}
+#E1 {
+   animation: KeyE1 7s infinite ;
+}
+#R1 {
+animation: KeyR1 7s infinite ;}
+#R2 {
+    animation: KeyR2 7s infinite ;
+}
+#E2 {
+    animation: KeyE2 7s infinite;
+}
+#L1 {
+    animation: KeyL1 7s infinite;
+}
+#L2 {
+    animation: KeyL2 7s infinite;
+}
+#D1 {
+    animation: KeyD1 7s infinite;
+}
+#A1 {
+    animation: KeyA1 7s infinite;
+}
+#V1 {
+    animation: KeyV1 7s infinite;}
+#I1 {
+    animation: KeyI1 7s infinite;}
+#S1 {
+    animation: KeyS1 7s infinite;
+}
+
+
+@keyframes KeyT1 {
+    0%, 100% { 
+        transform: rotate(330deg) translate(-33px, 0px);
+    }
+    50% { 
+        transform: rotate(360deg) translate(0px, 0px);
+    }
+}
+
+
+@keyframes KeyE1 {
+    0%, 100% { transform: rotate(10deg) translate(-10px, -10px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+
+@keyframes KeyR1 {
+    0%, 100% { transform: rotate(30deg) translate(-5px, 15px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+@keyframes KeyR2 {
+    0%, 100% { transform: rotate(345deg) translate(5px, -10px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyE2 {
+    0%, 100% { transform: rotate(355deg) translate(0px, -5px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyL1 {
+    0%, 100% { transform: rotate(5deg) translate(-15px, 5px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+@keyframes KeyL2 {
+    0%, 100% { transform: rotate(15deg) translate(-20px, 10px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+@keyframes KeyD1 {
+    0%, 100% { transform: rotate(340deg) translate(-25px, -15px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyA1 {
+    0%, 100% { transform: rotate(20deg) translate(-10px, 20px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+@keyframes KeyV1 {
+    0%, 100% { transform: rotate(330deg) translate(-30px, -20px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyI1 {
+    0%, 100% { transform: rotate(350deg) translate(-5px, -5px); }
+    50% { transform: rotate(360deg) translate(0px, 0px); }
+}
+
+@keyframes KeyS1 {
+    0%, 100% { transform: rotate(25deg) translate(-10px, 10px); }
+    50% { transform: rotate(0deg) translate(0px, 0px); }
+}
+.name {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 0.2em;  
+}
+.pimg {
+    width: 30vmin;
+    height: 40vmin; 
+    border-radius: 5px;
+    margin: 1em;
+    border: 1px solid  whitesmoke;
+object-fit: cover;
+    
+}
+.links, button.links {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border: 1px solid whitesmoke;
+    border-radius: 13px;
+    padding: 1.2em;
+    margin: 0.5em;  
+    display: inline-block;  
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    padding: 20px;
+    gap: 20px; 
+}
+
+.projects {
+    flex: 1 1 300px; 
+    max-width: 90%; 
+    background:black; 
+    color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 250px; 
+}
+
+.pbutton {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%; 
+    margin-top: 10px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.pbutton:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.projects h2 {
+    font-size: calc(1rem + 0.5vw); 
+}
+
+.projects p {
+    font-size: calc(0.8rem + 0.5vw); /
+}
+
+@media (max-width: 600px) {
+    .projects {
+        flex-basis: 100%; 
+    }
+
+    .pbutton {
+        padding: 15px 30px; 
+    }
+}
+
+
+.links:hover{
+    background-color: white;
+    color: black;
+    scale: 1.2;
+
+
+}
+
+
+h1 {
+    color:white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.gradient-text {
+    background: linear-gradient(45deg, rgb(2, 2, 155), red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: background-shift 10s infinite linear;
+    text-align: center;
+    letter-spacing: 0.05rem;
+
+    line-height: 1.5;
+
+}
+
+@keyframes background-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+
+.square {
+    
+    color: rgb(0, 191, 255); /* Brighter blue color */
+    text-shadow:
+        0 0 2px rgba(0, 191, 255, 1),    /* Sharp inner glow */
+        0 0 5px rgba(0, 191, 255, 1),    /* Strong immediate halo */
+        0 0 10px rgba(0, 191, 255, 1),   /* First layer of diffusion */
+        0 0 20px rgba(0, 191, 255, 0.8), /* Second layer of diffusion */
+        0 0 40px rgba(0, 191, 255, 0.6), /* Third layer of diffusion */
+        0 0 80px rgba(0, 191, 255, 0.4), /* Fourth layer of diffusion */
+        0 0 120px rgba(0, 191, 255, 0.2); /* Outermost broad glow */
+        z-index: -1;
+        font-size: larger;
+
+}
+
+.octagon{
+    color: rgb(255, 255, 255); /* White text */
+    text-shadow:
+        0 0 2px rgba(255, 255, 255, 1),    /* Sharp inner glow */
+        0 0 5px rgba(255, 255, 255, 1),    /* Strong immediate halo */
+        0 0 10px rgba(255, 255, 255, 1),   /* First layer of diffusion */
+        0 0 20px rgba(255, 255, 255, 0.8), /* Second layer of diffusion */
+        0 0 40px rgba(255, 255, 255, 0.6), /* Third layer of diffusion */
+        0 0 80px rgba(255, 255, 255, 0.4), /* Fourth layer of diffusion */
+        0 0 120px rgba(255, 255, 255, 0.2); /* Outermost broad glow */
+
+    position: absolute;
+    animation: rise 10s linear infinite;
+
+    font-size: larger;
+}
+
+@keyframes rise {
+    from {
+        opacity: 1;
+        bottom: -100%; 
+    }
+    to {
+        opacity: 0;
+        bottom: 100%; /* Move to above the screen */
+    }
+}
+
+
+.triangle {
+    color: rgb(119, 255, 201); /* Green color */
+    text-shadow:
+        0 0 2px rgba(64, 226, 160, 1),    /* Sharp inner glow */
+        0 0 5px rgba(64, 226, 160, 1),    /* Strong immediate halo */
+        0 0 10px rgba(64, 226, 160, 1),   /* First layer of diffusion */
+        0 0 20px rgba(64, 226, 160, 0.8), /* Second layer of diffusion */
+        0 0 40px rgba(64, 226, 160, 0.6), /* Third layer of diffusion */
+        0 0 80px rgba(64, 226, 160, 0.4), /* Fourth layer of diffusion */
+        0 0 120px rgba(64, 226, 160, 0.2); /* Outermost broad glow */
+
+}
+
+
+
+
+.circle {
+    color: rgb(255, 70, 70); /* Vibrant red text */
+    text-shadow:
+        0 0 2px rgba(255, 0, 0, 1),    /* Sharp inner glow */
+        0 0 5px rgba(255, 0, 0, 1),    /* Strong immediate halo */
+        0 0 10px rgba(255, 0, 0, 1),   /* First layer of diffusion */
+        0 0 20px rgba(255, 0, 0, 0.8), /* Second layer of diffusion */
+        0 0 40px rgba(255, 0, 0, 0.6), /* Third layer of diffusion */
+        0 0 80px rgba(255, 0, 0, 0.4), /* Fourth layer of diffusion */
+        0 0 120px rgba(255, 0, 0, 0.2); 
+
+}
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important; 
+        transition-duration: 0.001ms !important;
+    }
+}
+
+
+.heart {
+    color: rgb(255, 20, 147); 
+    text-shadow: 
+        0 0 5px rgba(255, 20, 147, 1),
+        0 0 10px rgba(255, 20, 147, 1),
+        0 0 20px rgba(255, 20, 147, 1),
+        0 0 40px rgba(255, 20, 147, 0.7),
+        0 0 80px rgba(255, 20, 147, 0.5),
+        0 0 100px rgba(255, 20, 147, 0.3); 
+    position: absolute;
+    font-size: larger;
+
+    animation: rise 10s linear infinite;
+}
+
+.star {
+    color: rgb(255, 215, 0); /* Gold color */
+    text-shadow: 
+        0 0 5px rgba(255, 215, 0, 1),
+        0 0 10px rgba(255, 215, 0, 1),
+        0 0 20px rgba(255, 215, 0, 1),
+        0 0 40px rgba(255, 215, 0, 0.7),
+        0 0 80px rgba(255, 215, 0, 0.5),
+        0 0 100px rgba(255, 215, 0, 0.3); /* Layered gold glow */
+    position: absolute;
+    font-size: larger;
+
+    animation: rise 10s linear infinite;
+}
+
+
+
+
+
